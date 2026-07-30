@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAYAN Tours & Travels</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="SAYAN Tours & Travels">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Packages</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Your Journey, Our Priority</h1>
+  <p>Flights • Trains • Hotels • Bus • Visa • Holiday Packages</p>
+
+  <a class="btn" href="https://wa.me/918133850962">Book on WhatsApp</a>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
