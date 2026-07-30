@@ -6,19 +6,26 @@
 <title>SAYAN Tours & Travels</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-background:#041d4d;
-color:white;
+}
+
+body{
+background:#071c4d;
+color:#fff;
 }
 
 header{
-background:#082b73;
-padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 8%;
+background:#082b73;
+position:sticky;
+top:0;
 }
 
 .logo{
@@ -28,53 +35,90 @@ color:gold;
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
-margin:15px;
+margin-left:18px;
 }
 
 .hero{
-padding:60px 20px;
+padding:90px 20px;
 text-align:center;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600");
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-font-size:40px;
+font-size:48px;
 color:gold;
 }
 
+.hero p{
+margin-top:15px;
+font-size:20px;
+}
+
 .btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
 background:gold;
-color:black;
-padding:15px 30px;
+color:#000;
 text-decoration:none;
-border-radius:10px;
+border-radius:30px;
 font-weight:bold;
 }
 
-.services{
+.section{
+padding:60px 8%;
+text-align:center;
+}
+
+.cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-padding:30px;
+margin-top:30px;
 }
 
 .card{
-background:#0a3d91;
+background:#0b357f;
 padding:25px;
 border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.contact{
+background:#082b73;
+padding:50px 20px;
 text-align:center;
 }
 
 footer{
-background:#082b73;
-padding:20px;
+background:#041338;
 text-align:center;
-margin-top:30px;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
 }
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -82,10 +126,7 @@ margin-top:30px;
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Flights</a>
-<a href="#">Trains</a>
-<a href="#">Hotels</a>
-<a href="#">Cabs</a>
+<a href="#">Services</a>
 <a href="#">Contact</a>
 </nav>
 
@@ -93,39 +134,83 @@ margin-top:30px;
 
 <section class="hero">
 
-<h1>Welcome to SAYAN Tours & Travels</h1>
+<h1>Your Journey, Our Priority</h1>
 
-<p>Book Flights, Trains, Hotels, Buses & Holiday Packages</p>
+<p>Flight • Train • Bus • Hotel • Cab • Holiday Packages</p>
 
-<br>
-
-<a class="btn" href="https://wa.me/91YOURNUMBER">
+<a class="btn" href="https://wa.me/918133850962">
 Book on WhatsApp
 </a>
 
 </section>
 
-<section class="services">
+<section class="section">
 
-<div class="card">✈ Flights</div>
+<h2 style="color:gold;">Our Services</h2>
 
-<div class="card">🚆 Trains</div>
+<div class="cards">
 
-<div class="card">🚌 Buses</div>
+<div class="card">
+<h3>✈ Flight Booking</h3>
+<p>Best Air Fare Available</p>
+</div>
 
-<div class="card">🏨 Hotels</div>
+<div class="card">
+<h3>🚆 Train Tickets</h3>
+<p>Fast & Easy Booking</p>
+</div>
 
-<div class="card">🚖 Cabs</div>
+<div class="card">
+<h3>🚌 Bus Booking</h3>
+<p>All India Routes</p>
+</div>
 
-<div class="card">🌍 Holiday Packages</div>
+<div class="card">
+<h3>🏨 Hotel Booking</h3>
+<p>Budget & Luxury Hotels</p>
+</div>
+
+<div class="card">
+<h3>🚖 Cab Service</h3>
+<p>Airport & Local Cab</p>
+</div>
+
+<div class="card">
+<h3>🌍 Holiday Packages</h3>
+<p>Domestic & International Tours</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2 style="color:gold;">Contact Us</h2>
+
+<br>
+
+<p>📍 Borkurani, Gagalmari, Morigaon, Assam - 782121</p>
+
+<p>📞 +91 8133850962</p>
+
+<p>📧 sayan.toursandtravels@gmail.com</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/918133850962">
+WhatsApp Now
+</a>
 
 </section>
 
 <footer>
 
-© 2026 SAYAN Tours & Travels
+© 2026 SAYAN Tours & Travels | All Rights Reserved
 
 </footer>
+
+<a class="whatsapp" href="https://wa.me/918133850962">💬</a>
 
 </body>
 </html>
