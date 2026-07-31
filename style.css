@@ -118,3 +118,129 @@ nav a:hover{
     max-width:700px;
     font-size:20px;
 }
+
+.services{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.services h2{
+    font-size:42px;
+    color:#FFD54F;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#12357d;
+    padding:30px;
+    border-radius:18px;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(255,213,79,.25);
+}
+
+.card a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.card i{
+    font-size:48px;
+    color:#FFD54F;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+.contact{
+    padding:80px 8%;
+    background:#0a255f;
+    text-align:center;
+}
+
+.contact h2{
+    color:#FFD54F;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    font-size:18px;
+    margin:10px 0;
+}
+
+footer{
+    background:#05163d;
+    text-align:center;
+    padding:25px;
+    color:#ccc;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    padding:15px;
+}
+
+.logo h2{
+    font-size:20px;
+}
+
+nav{
+    margin:15px 0;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.card{
+    padding:20px;
+}
+
+}
