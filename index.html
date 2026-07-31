@@ -1,126 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAYAN Tours & Travels</title>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+  background:#081c4b;
+  color:#fff;
+  line-height:1.6;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,20,55,.85);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
 
-</head>
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-<body>
+.logo img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+}
 
-<header>
+.logo h2{
+  color:#FFD54F;
+  font-size:28px;
+}
 
-<div class="logo">
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 15px;
+  transition:.3s;
+}
 
-<img src="logo.png" alt="Logo">
+nav a:hover{
+  color:#FFD54F;
+}
 
-<h2>SAYAN Tours & Travels</h2>
+.btn,.btn2{
+  display:inline-block;
+  padding:13px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
 
-</div>
+.btn{
+  background:#FFD54F;
+  color:#000;
+}
 
-<nav>
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(255,213,79,.5);
+}
 
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Services</a>
-<a href="#">Packages</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+.btn2{
+  border:2px solid #FFD54F;
+  color:#FFD54F;
+}
 
-</nav>
+.btn2:hover{
+  background:#FFD54F;
+  color:#000;
+}
 
-<a class="btn" href="https://wa.me/918133850962">Enquire Now</a>
+.hero{
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
 
-</header>
+.overlay{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.55);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
 
-<section class="hero">
+.hero h1{
+  font-size:68px;
+  color:#FFD54F;
+  text-shadow:2px 2px 15px #000;
+}
 
-<div class="overlay">
+.hero p{
+  font-size:22px;
+  margin:20px 0;
+}
 
-<h1>Your Journey,<br>Our Priority</h1>
+.services{
+  padding:90px 8%;
+  text-align:center;
+}
 
-<p>Flight • Train • Bus • Hotel • Passport • Visa</p>
+.services h2{
+  color:#FFD54F;
+  font-size:42px;
+  margin-bottom:40px;
+}
 
-<div class="buttons">
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
 
-<a class="btn" href="https://wa.me/918133850962">Book Now</a>
+.card{
+  background:#0d2b72;
+  padding:40px 25px;
+  border-radius:20px;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
 
-<a class="btn2" href="tel:+918133850962">Call Now</a>
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
 
-</div>
+.card i{
+  font-size:50px;
+  color:#FFD54F;
+  margin-bottom:20px;
+}
 
-</div>
+.card h3{
+  font-size:22px;
+}
 
-</section>
+.contact{
+  background:#0b245d;
+  text-align:center;
+  padding:80px 8%;
+}
 
-<section class="services">
+.contact h2{
+  color:#FFD54F;
+  font-size:40px;
+  margin-bottom:20px;
+}
 
-<h2>Our Services</h2>
+.contact p{
+  margin:12px 0;
+  font-size:18px;
+}
 
-<div class="cards">
+footer{
+  text-align:center;
+  padding:20px;
+  background:#05163d;
+}
 
-<div class="card">
-<i class="fa-solid fa-plane"></i>
-<h3>Flight Booking</h3>
-</div>
+@media(max-width:768px){
 
-<div class="card">
-<i class="fa-solid fa-train"></i>
-<h3>Train Ticket</h3>
-</div>
+header{
+  flex-direction:column;
+}
 
-<div class="card">
-<i class="fa-solid fa-bus"></i>
-<h3>Bus Booking</h3>
-</div>
+nav{
+  margin:15px 0;
+}
 
-<div class="card">
-<i class="fa-solid fa-hotel"></i>
-<h3>Hotel Booking</h3>
-</div>
+nav a{
+  display:inline-block;
+  margin:8px;
+}
 
-<div class="card">
-<i class="fa-solid fa-earth-asia"></i>
-<h3>Holiday Packages</h3>
-</div>
+.hero h1{
+  font-size:40px;
+}
 
-<div class="card">
-<i class="fa-solid fa-passport"></i>
-<h3>Passport & Visa</h3>
-</div>
+.hero p{
+  font-size:17px;
+}
 
-</div>
+.logo h2{
+  font-size:20px;
+}
 
-</section>
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<p>📍 Borkurani, Gagalmari, Morigaon, Assam - 782121</p>
-
-<p>📞 +91 8133850962</p>
-
-<p>📧 sayan.toursandtravels@gmail.com</p>
-
-<a class="btn" href="https://wa.me/918133850962">WhatsApp Now</a>
-
-</section>
-
-<footer>
-
-© 2026 SAYAN Tours & Travels. All Rights Reserved.
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+}
