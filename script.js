@@ -31,3 +31,39 @@ cards.forEach(card => {
   card.style.transition = "all 0.6s ease";
   observer.observe(card);
 });
+.booking{
+    padding:80px 8%;
+    background:#0b245d;
+    text-align:center;
+}
+
+.booking h2{
+    color:#FFD54F;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.booking form{
+    max-width:700px;
+    margin:auto;
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.booking textarea{
+    resize:vertical;
+}
+
+.booking button{
+    width:100%;
+    margin-top:15px;
+}
