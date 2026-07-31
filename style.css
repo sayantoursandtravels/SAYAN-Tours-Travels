@@ -110,6 +110,21 @@ margin-top:90px;
     align-items:center;
     padding:20px;
 }
+.hero{
+height:65vh;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.hero p{
+font-size:15px;
+}
 
 .hero h1{
     font-size:46px;
