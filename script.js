@@ -1,13 +1,9 @@
-// SAYAN Tours & Travels JavaScript
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-
+// Smooth scroll for menu links
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
-
-    if(target){
+    if (target) {
+      e.preventDefault();
       target.scrollIntoView({
         behavior: 'smooth'
       });
@@ -15,38 +11,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Header Shadow on Scroll
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
+// Card animation on scroll
+const cards = document.querySelectorAll('.card');
 
-  if (window.scrollY > 50) {
-    header.style.background = "#041d4d";
-    header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.4)";
-  } else {
-    header.style.background = "#06153a";
-    header.style.boxShadow = "none";
-  }
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, {
+  threshold: 0.2
 });
 
-// Service Card Hover Animation
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-10px) scale(1.03)";
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0) scale(1)";
-  });
+cards.forEach(card => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(40px)";
+  card.style.transition = "all 0.6s ease";
+  observer.observe(card);
 });
-
-// Gallery Click Effect
-document.querySelectorAll(".gallery-grid img").forEach(img => {
-  img.addEventListener("click", () => {
-    window.open(img.src, "_blank");
-  });
-});
-
-// Welcome Message
-window.onload = function () {
-  console.log("Welcome to SAYAN Tours & Travels");
-};
