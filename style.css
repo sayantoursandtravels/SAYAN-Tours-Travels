@@ -311,3 +311,15 @@ z-index:999;
     margin-top:20px;
     border-radius:10px;
 }
+
+.why-us{
+    padding:80px 8%;
+    background:#0b245d;
+    text-align:center;
+}
+
+.why-us h2{
+    color:#FFD54F;
+    font-size:40px;
+    margin-bottom:40px;
+}
